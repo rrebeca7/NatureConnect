@@ -1,0 +1,80 @@
+.pageBody {
+  background-image: url("src/assets/NC_WelcomeImage4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 130vh;
+  display: flex;
+  flex-direction: row;
+}
+.spacer {
+  flex-grow: 0.8;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.welcomeText {
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 128px;
+  margin: 10% 20% 0 0;
+  /*margin: 0 150px 0 0;*/
+  color: black;
+  text-align: center;
+}
+
+.descriptionText {
+  width: 330px;
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: black;
+  margin: 3% 0 0 25%;
+  /*margin: 7px 0 0 185px;*/
+  text-align: center;
+  vertical-align: middle;
+}
+
+.joinButton {
+  margin: 5% 0 0 42%;
+  /*margin: 25px 0 0 325px;*/
+  width: 131px;
+  height: 48px;
+  background-color: #1e3026;
+
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+}
+
+.textBody {
+  background-color: #f5f3f4;
+}
+
+.textHeading {
+  margin: 0;
+  color: black;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 50px;
+  padding: 5% 0 10px 15%;
+  /*padding: 100px 0 10px 180px;*/
+}
+
+.text {
+  margin: 0;
+  width: 70%;
+  color: black;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  padding: 15px 15% 70px 15%;
+}
