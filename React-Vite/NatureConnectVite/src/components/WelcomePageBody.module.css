@@ -1,5 +1,5 @@
 .pageBody {
-  background-image: url("src/assets/NC_WelcomeImage4.jpg");
+  background-image: url("assets/NC_WelcomeImage4.jpg");
   background-size: cover;
   background-position: center;
   height: 130vh;
@@ -13,7 +13,8 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 7%;
+  margin-left: 25%;
 }
 
 .welcomeText {

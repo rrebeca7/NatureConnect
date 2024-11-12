@@ -61,7 +61,7 @@ public ResponseEntity<Goal> activeGoal(@PathVariable String goalType) {
     }
 
 }
-
+/*
     @GetMapping(path="/active/{goalType}")
     public ResponseEntity<Goal> goalPicker(@PathVariable String goalType) {
         //
@@ -74,6 +74,6 @@ public ResponseEntity<Goal> activeGoal(@PathVariable String goalType) {
         }
 
     }
-
+*/
 
 }
