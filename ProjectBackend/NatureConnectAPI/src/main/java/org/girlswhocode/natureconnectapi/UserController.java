@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 
 @Controller
@@ -18,7 +19,7 @@ public class UserController {
     private UserGoalRepository userGoalRepository;
 
    @PostMapping
-    public ResponseEntity<?> addUser(@RequestBody User user) {
+    public ResponseEntity<?> addUser(@RequestBody User user) throws NoSuchAlgorithmException {
 
        //Validate user data
        if(user.getName() == null || user.getName().trim().isEmpty()) {
@@ -31,7 +32,8 @@ public class UserController {
            return ResponseEntity.badRequest().body("Password empty or invalid");
        }
        user.setPoints(0); //Initialize Zero points.
-
+       //Encrypt password
+       user.setPassword(User.GenerateMD5Hash(user.getPassword()));
        //Save User in the db.
        userRepository.save(user);
        user.setPassword("#######"); //Mask password, so it should not visible in the response.
@@ -51,8 +53,10 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<User> getUserByEmailAndPassword(@RequestParam String username,@RequestParam String password) {
-        User user = userRepository.findByEmailAndPassword(username,password).orElse(null);
+    public ResponseEntity<User> getUserByEmailAndPassword(@RequestParam String username,@RequestParam String password) throws NoSuchAlgorithmException {
+
+       String passwordInMD5 = User.GenerateMD5Hash(password);
+        User user = userRepository.findByEmailAndPassword(username,passwordInMD5).orElse(null);
         if(user != null) {
             user.setPassword("#######"); //Mask password, so it should not visible in the response.
             return ResponseEntity.ok(user);

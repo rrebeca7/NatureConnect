@@ -5,6 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
     @Id
@@ -52,10 +57,25 @@ public class User {
     }
 
     public String getPassword() {
-        return         password;
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public static String GenerateMD5Hash(String value) throws NoSuchAlgorithmException {
+        if (value != null) {
+            //Apply MD5 to password field
+            byte[] bytesOfMessage = value.getBytes(StandardCharsets.UTF_8);
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] theMD5digest = md.digest(bytesOfMessage);
+            BigInteger bigInt = new BigInteger(1, theMD5digest);
+            return bigInt.toString(16);
+        }
+        return null;
+    }
+
+
+
 }
