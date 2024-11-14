@@ -9,9 +9,18 @@ import jakarta.persistence.Id;
 public class UserGoal {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer userGoalId;
+
     private Integer userId;
 
     private Integer goalId;
+
+    public Integer getUserGoalId() {
+        return userGoalId;
+    }
+    public void setUserGoalId(Integer userGoalId) {
+        this.userGoalId = userGoalId;
+    }
 
     public Integer getUserId() {
         return userId;

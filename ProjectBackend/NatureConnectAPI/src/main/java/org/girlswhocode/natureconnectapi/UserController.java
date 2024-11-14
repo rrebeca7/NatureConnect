@@ -8,14 +8,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
 @RequestMapping(path="/users") // This means URL's start with /demo (after Application path)
 public class UserController {
-    @Autowired // This means to get the bean called userRepository
 
+    @Autowired // This means to get the bean called userRepository
     private UserRepository userRepository;
+
+    @Autowired
     private UserGoalRepository userGoalRepository;
 
    @PostMapping
@@ -66,6 +69,19 @@ public class UserController {
         }
     }
 
+
+
+    @GetMapping(path="/{userId}/goals")
+    public ResponseEntity<List<UserGoal>> getUserGoals(@PathVariable Integer userId) {
+
+        List<UserGoal> userGoals = userGoalRepository.findByUserId(userId);
+        if(userGoals != null) {
+            return ResponseEntity.ok(userGoals);
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
+    }
 
 //TO DO:
 public void saveUserGoal() {
