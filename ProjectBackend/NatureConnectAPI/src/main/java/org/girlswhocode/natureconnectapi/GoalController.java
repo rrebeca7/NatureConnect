@@ -15,20 +15,6 @@ public class GoalController {
     private GoalRepository goalRepository;
     private ActiveGoalRepository activeGoalRepository;
 
-    /*
-    @PostMapping(path="/get") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser (@RequestParam String name
-            , @RequestParam String email) {
-        // @ResponseBody means the returned String is the response, not a view name
-        // @RequestParam means it is a parameter from the GET or POST request
-
-        User n = new User();
-        n.setName(name);
-        n.setEmail(email);
-        userRepository.save(n);
-        return "Saved";
-    }
-*/
 
     @GetMapping(path="/{id}")
     public ResponseEntity<Goal> getGoalsById(@PathVariable Integer id) {
@@ -42,16 +28,15 @@ public class GoalController {
 
     }
 
-    @GetMapping(path="/")
+    @GetMapping()
     public @ResponseBody Iterable<Goal> getAllGoals() {
         // This returns a JSON or XML with the users
         return goalRepository.findAll();
     }
 
 
-@GetMapping(path="/active/{goalType}")
-public ResponseEntity<Goal> activeGoal(@PathVariable String goalType) {
-    //
+    @GetMapping(path="/active/{goalType}")
+    public ResponseEntity<Goal> activeGoal(@PathVariable String goalType) {
     Optional<Goal> activeGoal = goalRepository.findActiveGoal(goalType);
     if(activeGoal.isPresent()) {
         return ResponseEntity.ok(activeGoal.get());
@@ -61,19 +46,6 @@ public ResponseEntity<Goal> activeGoal(@PathVariable String goalType) {
     }
 
 }
-/*
-    @GetMapping(path="/active/{goalType}")
-    public ResponseEntity<Goal> goalPicker(@PathVariable String goalType) {
-        //
-        Optional<Goal> activeGoal = goalRepository.findActiveGoal(goalType);
-        if(activeGoal.isPresent()) {
-            return ResponseEntity.ok(activeGoal.get());
-        }
-        else {
-            return ResponseEntity.notFound().build();
-        }
 
-    }
-*/
 
 }

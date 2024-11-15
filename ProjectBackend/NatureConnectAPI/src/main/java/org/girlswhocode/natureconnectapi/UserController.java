@@ -21,6 +21,9 @@ public class UserController {
     @Autowired
     private UserGoalRepository userGoalRepository;
 
+    @Autowired
+    private GoalRepository goalRepository;
+
    @PostMapping
     public ResponseEntity<?> addUser(@RequestBody User user) throws NoSuchAlgorithmException {
 
@@ -55,6 +58,7 @@ public class UserController {
         }
     }
 
+
     @GetMapping
     public ResponseEntity<User> getUserByEmailAndPassword(@RequestParam String username,@RequestParam String password) throws NoSuchAlgorithmException {
 
@@ -69,8 +73,6 @@ public class UserController {
         }
     }
 
-
-
     @GetMapping(path="/{userId}/goals")
     public ResponseEntity<List<UserGoal>> getUserGoals(@PathVariable Integer userId) {
 
@@ -83,15 +85,28 @@ public class UserController {
         }
     }
 
-//TO DO:
-public void saveUserGoal() {
-    userGoalRepository.save(new UserGoal()); //add more?
-}
+    @PostMapping(path="/{userId}/goals")
+    public ResponseEntity<?>  saveUserGoal(@RequestBody UserGoal userGoal) {
 
-//get user goals (all the goals that user has completed)
 
-//get user points
+        Optional<User> opUser = userRepository.findById(userGoal.getUserId());
+        Optional<Goal> opGoal = goalRepository.findById(userGoal.getGoalId());
 
+        if(opUser.isEmpty()) {
+            return ResponseEntity.badRequest().body("User does not exit.");
+        }
+        if(opUser.isEmpty()) {
+            return ResponseEntity.badRequest().body("Goal does not exist.");
+        }
+        userGoalRepository.save(userGoal);
+
+        //update user with the points
+        User user = opUser.get();
+        user.setPoints(user.getPoints() + 10 ); //TODO get the Point from the goal from now is harcoded to 10.
+
+        userRepository.save(user);
+        return ResponseEntity.ok(userGoal);
+    }
 
 
 }
