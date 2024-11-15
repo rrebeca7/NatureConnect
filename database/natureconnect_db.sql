@@ -55,10 +55,12 @@ CREATE TABLE IF NOT EXISTS `active_goal`  (
 
 # Create user_goal table
 	CREATE TABLE IF NOT EXISTS user_goal (
+	  `user_goal_id` INT,   
     `user_id` INT,
-    `goal__id` INT,
+    `goal_id` INT,
     FOREIGN KEY (`user_id`)
         REFERENCES user (`user_id`),
     FOREIGN KEY (`goal_id`)
-        REFERENCES goal (`goal_id`)
+        REFERENCES goal (`goal_id`),
+		PRIMARY KEY (`user_goal_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_0900_AI_CI;
