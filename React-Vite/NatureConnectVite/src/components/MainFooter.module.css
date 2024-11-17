@@ -1,5 +1,15 @@
 .footerDiv {
-  height: 80px;
+  height: 100px;
   width: 100vw;
-  background-color: white;
+  background-color: #242424;
+  border-top: 0.5px solid #eaeaea;
+  display: flex;
+  flex-direction: row;
+}
+
+.attribute {
+  color: #89b4ad;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 15px;
 }

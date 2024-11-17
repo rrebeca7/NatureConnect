@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa";
+import classes from "./ResourcesDropdown.module.css";
+import image from "/src/assets/AustinParkImage2.png";
 
-function Dropdown() {
+function ResourcesDropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -24,39 +28,50 @@ function Dropdown() {
       ref={dropdownRef}
       style={{ position: "relative", display: "inline-block" }}
     >
-      <button onClick={toggleDropdown}>Menu</button>
+      <button className={classes.resourcesButton} onClick={toggleDropdown}>
+        Resources
+        <FaChevronDown className={classes.icon} />
+      </button>
       {isOpen && (
-        <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            backgroundColor: "#f9f9f9",
-            boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
-            zIndex: 1,
-            minWidth: "160px",
-          }}
-        >
-          <a href="#profile" style={menuItemStyle}>
-            Profile
-          </a>
-          <a href="#settings" style={menuItemStyle}>
-            Settings
-          </a>
-          <a href="#logout" style={menuItemStyle}>
-            Logout
-          </a>
+        <div className={classes.menuCard}>
+          <div className={classes.menuItemsDiv}>
+            <h2 className={classes.menuHeaderItem}>General</h2>
+            <p className={classes.menuItem}>Mental health and nature</p>
+            <p className={classes.menuItem}>How tos</p>
+            <p className={classes.menuItem}>Helpful sites</p>
+            <h2 className={classes.menuHeaderItem}>Austin Area Resources</h2>
+            <p className={classes.menuItem}>Events</p>
+            <p className={classes.menuItem}>Getting Involved</p>
+            <Link
+              className={classes.menuItem}
+              to="/SignUpForm"
+              onClick={() => setIsOpen(false)}
+            >
+              Profile
+            </Link>
+            <Link
+              className={classes.menuHeaderItem}
+              to="/VisitorGoalsPage"
+              onClick={() => setIsOpen(false)}
+            >
+              View Goals
+            </Link>
+            <div className={classes.spacer}></div>
+          </div>
+          <div className={classes.menuSideCard}>
+            <img className={classes.image} src={image} alt="Forest" />
+            <div className={classes.spacerTwo}></div>
+            <div className={classes.sideCardTextDiv}>
+              <h2 className={classes.sideCardHeading}>
+                {props.menuSideHeading}
+              </h2>
+              <p className={classes.sideCardText}>{props.menuSideText}</p>
+            </div>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
-const menuItemStyle = {
-  padding: "12px 16px",
-  display: "block",
-  color: "#333",
-  textDecoration: "none",
-};
-
-export default Dropdown;
+export default ResourcesDropdown;

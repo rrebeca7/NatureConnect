@@ -1,13 +1,19 @@
 .card {
-  background-color: #f5f4f2;
-  width: 700px;
-  height: 400px;
+  background-color: #f5f3f4;
+  width: 75vw;
+  min-height: 500px;
   border-radius: 25px;
   text-align: center;
-  padding: 50px;
+
+  display: flex;
+  flex-direction: row;
+}
+.textButtonDiv {
+  width: 100%;
 }
 .textContainer {
-  margin: 0 0 0 5%;
+  width: 80%;
+  margin: 0 8% 0 12%;
   text-align: left;
 }
 
@@ -46,4 +52,24 @@
   font-size: 20px;
   width: 180px;
   height: 48px;
+}
+.image {
+  display: none;
+}
+
+@media only screen and (min-width: 1250px) {
+  .image {
+    display: block;
+    width: 500px;
+    height: 450px;
+    margin-left: 10px;
+
+    /*background-image: url("/src/assets/natureImage.png");
+    background-size: cover;
+    background-position: center;
+    */
+  }
+}
+.spacer {
+  height: 25px;
 }

@@ -1,0 +1,33 @@
+.goalsPageBody {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 25px;
+
+  background-color: white;
+}
+.spacer {
+  flex: 1;
+}
+.largeGoalCard {
+  margin-left: 12.5vw;
+}
+
+/*
+.largeGoalCard * {
+  margin: 15px;
+} */
+
+.smallGoalCards {
+  margin-left: 12.5vw;
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}

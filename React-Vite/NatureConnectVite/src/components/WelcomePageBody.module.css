@@ -1,8 +1,9 @@
 .pageBody {
-  background-image: url("assets/NC_WelcomeImage4.jpg");
+  background-image: url("src/assets/NC_WelcomeImage4.jpg");
   background-size: cover;
   background-position: center;
-  height: 130vh;
+  width: 100vw;
+  height: 140vh;
   display: flex;
   flex-direction: row;
 }
