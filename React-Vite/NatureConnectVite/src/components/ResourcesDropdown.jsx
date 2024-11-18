@@ -56,6 +56,13 @@ function ResourcesDropdown(props) {
             >
               View Goals
             </Link>
+            <Link
+              className={classes.menuHeaderItem}
+              to="/ExpandedGoalCard"
+              onClick={() => setIsOpen(false)}
+            >
+              ExpandedGoalCard test
+            </Link>
             <div className={classes.spacer}></div>
           </div>
           <div className={classes.menuSideCard}>

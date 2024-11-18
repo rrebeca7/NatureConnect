@@ -2,8 +2,6 @@ import classes from "./MainHeader.module.css";
 import ResourcesDropdown from "./ResourcesDropdown";
 import image from "/src/assets/FullNatureConnectLogo.png";
 
-import { FaChevronDown } from "react-icons/fa"; // Example: Font Awesome icon
-
 function MainHeader() {
   const menuSideHeadingTxt = "Visit local state parks and reserves";
   const menuText =
@@ -17,7 +15,7 @@ function MainHeader() {
 
       <div className={classes.spacerOne}></div>
       <h1 className={classes.logo}>
-        <img className={classes.image} src={image} alt="Nature Connect" />
+        <img className={classes.logoNC} src={image} alt="Nature Connect" />
       </h1>
       <div className={classes.spacerTwo}></div>
       <div className={classes.buttonsDiv}>

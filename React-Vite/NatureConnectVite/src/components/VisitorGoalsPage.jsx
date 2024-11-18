@@ -30,7 +30,7 @@ function VisitorGoalsPage() {
           name="Volunteer at a local nature reserve, community garden or sanctuary"
         />
       </div>
-      <div className={classes.spacer}></div>
+      <div className={classes.spacerTwo}></div>
     </div>
   );
 }

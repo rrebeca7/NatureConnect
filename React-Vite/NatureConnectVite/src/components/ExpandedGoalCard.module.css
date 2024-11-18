@@ -1,0 +1,85 @@
+.card {
+  height: 100vh;
+  width: 90vw;
+  margin: 0 5vw;
+
+  max-height: 1900px;
+  max-width: 1900px;
+  background-color: #f5f3f4;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.columnOne {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 40px;
+  min-width: 30%;
+}
+
+.columnTwo {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnThree {
+  display: flex;
+  flex-direction: column;
+}
+.goalImage {
+  color: black;
+  height: 25vh;
+  width: auto;
+}
+
+.resourcesTextDiv {
+  margin-left: 10px;
+}
+
+.resourcesHeading {
+  color: #1a4709;
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.resourcesLinkTxt {
+  color: #2f3e46;
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.endDateTxt {
+  margin-top: auto;
+  color: black;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.goalHeading {
+  color: #1a4709;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.goalName {
+  color: #1a4709;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.goalLongDesc {
+  color: #1a4709;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.goalStepsDiv {
+  height: 300px;
+}

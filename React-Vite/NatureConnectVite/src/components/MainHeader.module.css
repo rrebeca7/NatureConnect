@@ -17,16 +17,16 @@
   justify-content: center;
   align-items: center;
 }
-.image {
-  height: 65px;
+.logoNC {
+  height: 60px;
   width: auto;
   object-fit: cover;
 }
 .spacerOne {
-  flex: 1.09;
+  flex: 1;
 }
 .spacerTwo {
-  flex: 0.91;
+  flex: 1;
 }
 /*
 .resourcesButton {

@@ -11,8 +11,13 @@
   background-color: white;
 }
 .spacer {
-  flex: 1;
+  height: 30px;
 }
+
+.spacerTwo {
+  height: 100px;
+}
+
 .largeGoalCard {
   margin-left: 12.5vw;
 }
