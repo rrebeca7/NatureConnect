@@ -1,6 +1,8 @@
 import classes from "./MainHeader.module.css";
 import ResourcesDropdown from "./ResourcesDropdown";
 import image from "/src/assets/FullNatureConnectLogo.png";
+import SignUpForm from "./SignUpForm";
+import LogInForm from "./LogInForm";
 
 import { FaChevronDown } from "react-icons/fa"; // Example: Font Awesome icon
 
@@ -21,8 +23,12 @@ function MainHeader() {
       </h1>
       <div className={classes.spacerTwo}></div>
       <div className={classes.buttonsDiv}>
-        <button className={classes.logInButton}>Log in</button>
-        <button className={classes.signUpButton}>Sign up</button>
+        <Link to="/logInForm">
+          <button className={classes.logInButton}>Log in</button>
+        </Link>
+        <Link to="/signUpForm">
+          <button className={classes.signUpButton}>Sign up</button>
+        </Link>
       </div>
     </header>
   );
