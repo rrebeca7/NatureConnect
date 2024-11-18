@@ -1,5 +1,5 @@
 .card {
-  height: 90vh;
+  min-height: 90vh;
   width: 90vw;
   margin: 0 5vw;
 
@@ -14,8 +14,8 @@
 .columnOne {
   display: flex;
   flex-direction: column;
-  margin: 30px 40px;
-  min-width: 30%;
+  margin: 10px 20px 0 40px;
+  min-width: 35%;
 }
 
 .columnTwo {
@@ -30,13 +30,13 @@
   min-width: 2%;
 }
 .goalImage {
-  color: black;
-  height: 27vh;
+  height: 400px;
   width: auto;
+  margin: 0;
 }
 
 .resourcesTextDiv {
-  margin-left: 10px;
+  margin: 0 10px;
 }
 
 .resourcesHeading {
@@ -44,6 +44,7 @@
   font-family: "Raleway", serif;
   font-weight: 500;
   font-size: 32px;
+  margin: 0 0 10px 0;
 }
 
 .resourcesLinkTxt {
@@ -51,6 +52,15 @@
   font-family: "Raleway", serif;
   font-weight: 500;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.linkItem {
+  color: #2f3e46;
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 5px 0;
 }
 
 .endDateTxt {
@@ -59,6 +69,7 @@
   font-family: "Lato", serif;
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .goalHeading {
@@ -66,7 +77,7 @@
   font-family: "Raleway", serif;
   font-weight: 400;
   font-size: 48px;
-  margin: 70px 0 30px 0;
+  margin: 70px 5% 30px 5%;
 }
 
 .goalName {
@@ -74,26 +85,32 @@
   font-family: "Lato", serif;
   font-weight: 700;
   font-size: 24px;
-  margin: 0;
+  margin: 10px 5%;
 }
 
 .goalLongDesc {
   color: #1a4709;
-  font-family: "Raleway", serif;
+  font-family: "Lato", serif;
   font-weight: 400;
   font-size: 24px;
   width: 90%;
-  margin: 20px 0;
+  margin: 20px 5%;
 }
 
 .goalStepsDiv {
-  height: 300px;
+  height: 500px;
+}
+
+.stepsImage {
+  height: 450px;
+  width: auto;
+  margin: 0;
 }
 
 .completeButton {
   width: 194px;
   height: 48px;
-
+  font-family: "Lato", serif;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -101,5 +118,13 @@
   vertical-align: middle;
   text-align: center;
   align-self: center;
-  margin: 10px 15px 50px 15px;
+  margin: 10px 15px 70px 15px;
+}
+
+.exitButton {
+  font-family: "Raleway", serif;
+  color: black;
+  font-size: 48px;
+  margin-top: 0 !important;
+  margin-right: 105px;
 }

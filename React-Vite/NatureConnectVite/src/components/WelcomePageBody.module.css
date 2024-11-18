@@ -1,21 +1,24 @@
 .pageBody {
-  background-image: url("src/assets/NC_WelcomeImage4.jpg");
-  background-size: cover;
-  background-position: center;
   width: 100vw;
   height: 140vh;
   display: flex;
   flex-direction: row;
 }
-.spacer {
-  flex-grow: 0.8;
-}
 
+.spacer {
+  flex-grow: 1;
+}
+.welcomeTop {
+  margin-top: 70px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+}
 .textContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 7%;
-  margin-left: 25%;
+  width: 100%;
+  margin: 100px 0;
 }
 
 .welcomeText {
@@ -23,10 +26,11 @@
   font-weight: 500;
   font-style: normal;
   font-size: 128px;
-  margin: 10% 20% 0 0;
+
   /*margin: 0 150px 0 0;*/
   color: black;
   text-align: center;
+  margin: 0;
 }
 
 .descriptionText {
@@ -36,14 +40,15 @@
   font-style: normal;
   font-size: 20px;
   color: black;
-  margin: 3% 0 0 25%;
+
   /*margin: 7px 0 0 185px;*/
   text-align: center;
   vertical-align: middle;
+  margin-top: 10px;
+  align-self: center;
 }
 
 .joinButton {
-  margin: 5% 0 0 42%;
   /*margin: 25px 0 0 325px;*/
   width: 131px;
   height: 48px;
@@ -53,6 +58,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
+  align-self: center;
 }
 
 .textBody {

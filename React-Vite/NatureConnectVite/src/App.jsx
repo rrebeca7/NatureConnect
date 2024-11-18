@@ -43,11 +43,11 @@ function App() {
               element={
                 <ExpandedGoalCard
                   goalResources="resource1"
-                  endDate="7/25/24"
+                  endDate="11/19/24"
                   goalType="Daily"
-                  name="Spot a local plant"
-                  longDesc="Research a native  plant that is in your area and see if you can spot it while outside in nature, or even on your daily commute. Be sure to be respectful of nature and the community around you while doing so and to stick to designated public trails while on your search!"
-                  steps="Find a local plant"
+                  name="Eat a local fruit or vegetable"
+                  longDesc="Buying produce that is in season or grown locally can often be a more healthy and sustainable choice. Support local growers by buying their produce or enjoy a juicier and tastier bite by buying in season!"
+                  steps="Eat a local fruit or vegetable"
                 />
               }
             />
