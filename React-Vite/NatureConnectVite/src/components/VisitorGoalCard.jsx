@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 import classes from "./VisitorGoalCard.module.css";
 import image from "/src/assets/natureImage.png";
 
 function VisitorGoalCard({ goalType, name, shortDesc, endDate }) {
+  const navigate = useNavigate();
   return (
     <div className={classes.card}>
       <div className={classes.image}>
@@ -15,8 +18,13 @@ function VisitorGoalCard({ goalType, name, shortDesc, endDate }) {
           <p className={classes.shortDesc}>{shortDesc}</p>
           <p className={classes.date}>CLOSES {endDate}</p>
         </div>
-
-        <button className={classes.showMoreButton}>Show More</button>
+        \
+        <button
+          className={classes.showMoreButton}
+          onClick={() => navigate("/ExpandedGoalCard")}
+        >
+          Show More
+        </button>
         <div className={classes.spacer}></div>
       </div>
     </div>
