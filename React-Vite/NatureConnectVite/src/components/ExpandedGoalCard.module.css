@@ -1,9 +1,9 @@
 .card {
-  height: 100vh;
+  height: 90vh;
   width: 90vw;
   margin: 0 5vw;
 
-  max-height: 1900px;
+  max-height: 1400px;
   max-width: 1900px;
   background-color: #f5f3f4;
   border-radius: 25px;
@@ -21,15 +21,17 @@
 .columnTwo {
   display: flex;
   flex-direction: column;
+  min-width: 50%;
 }
 
 .columnThree {
   display: flex;
   flex-direction: column;
+  min-width: 2%;
 }
 .goalImage {
   color: black;
-  height: 25vh;
+  height: 27vh;
   width: auto;
 }
 
@@ -64,6 +66,7 @@
   font-family: "Raleway", serif;
   font-weight: 400;
   font-size: 48px;
+  margin: 70px 0 30px 0;
 }
 
 .goalName {
@@ -71,6 +74,7 @@
   font-family: "Lato", serif;
   font-weight: 700;
   font-size: 24px;
+  margin: 0;
 }
 
 .goalLongDesc {
@@ -78,8 +82,24 @@
   font-family: "Raleway", serif;
   font-weight: 400;
   font-size: 24px;
+  width: 90%;
+  margin: 20px 0;
 }
 
 .goalStepsDiv {
   height: 300px;
+}
+
+.completeButton {
+  width: 194px;
+  height: 48px;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #b47b64;
+  vertical-align: middle;
+  text-align: center;
+  align-self: center;
+  margin: 10px 15px 50px 15px;
 }

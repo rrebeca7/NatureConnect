@@ -17,7 +17,7 @@ function ExpandedGoalCard(props) {
         <h3 className={classes.goalName}>{props.name}</h3>
         <p className={classes.goalLongDesc}>{props.longDesc}</p>
         <div className={classes.goalStepsDiv}>{props.steps}</div>
-        <button>Mark Complete</button>
+        <button className={classes.completeButton}>Mark Complete</button>
       </div>
       <div className={classes.columnThree}>
         <h2>x</h2>
