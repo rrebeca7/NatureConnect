@@ -27,12 +27,15 @@
 .columnThree {
   display: flex;
   flex-direction: column;
-  min-width: 2%;
+  min-width: 50px;
+  width: 3%;
+  vertical-align: middle;
+  text-align: center;
 }
 .goalImage {
-  height: 400px;
-  width: auto;
-  margin: 0;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
 }
 
 .resourcesTextDiv {
@@ -122,9 +125,16 @@
 }
 
 .exitButton {
+  background-color: #f5f3f4;
   font-family: "Raleway", serif;
   color: black;
-  font-size: 48px;
-  margin-top: 0 !important;
-  margin-right: 105px;
+  font-size: 45px;
+  margin-top: 10px !important;
+  margin-right: 15px;
+
+  vertical-align: middle;
+  text-align: center;
+  padding: 0;
+  width: 48px;
+  height: 48px;
 }

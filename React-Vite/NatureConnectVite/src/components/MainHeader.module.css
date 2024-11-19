@@ -17,6 +17,11 @@
   justify-content: center;
   align-items: center;
 }
+.homeButton {
+  padding: 0;
+  background-color: white;
+  border: none;
+}
 .logoNC {
   height: 60px;
   width: auto;

@@ -32,26 +32,18 @@ function WelcomePageBody() {
       <div className={classes.textBody}>
         <h2 className={classes.textHeading}>Our Mission</h2>
         <p className={classes.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Our mission is to inspire and empower individuals to reconnect with
+          nature, improve their mental well-being, and strengthen their local
+          communities. By providing personalized goals, practical guidance, and
+          opportunities to engage with the environment, we aim to foster
+          meaningful outdoor experiences that benefit both people and the
+          planet. Through this initiative, we strive to create a healthier, more
+          connected world—one step, one discovery, and one goal at a time.
         </p>
       </div>
       <div className={classes.textBody}>
-        <h2 className={classes.textHeading}>Meet the Team</h2>
-        <p className={classes.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h2 className={classes.textHeading}></h2>
+        <p className={classes.text}></p>
       </div>
     </div>
   );

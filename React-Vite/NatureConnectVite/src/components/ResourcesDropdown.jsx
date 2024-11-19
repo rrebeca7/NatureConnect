@@ -37,18 +37,12 @@ function ResourcesDropdown(props) {
           <div className={classes.menuItemsDiv}>
             <h2 className={classes.menuHeaderItem}>General</h2>
             <p className={classes.menuItem}>Mental health and nature</p>
-            <p className={classes.menuItem}>How tos</p>
+            <p className={classes.menuItem}>How you can help nature</p>
             <p className={classes.menuItem}>Helpful sites</p>
             <h2 className={classes.menuHeaderItem}>Austin Area Resources</h2>
             <p className={classes.menuItem}>Events</p>
             <p className={classes.menuItem}>Getting Involved</p>
-            <Link
-              className={classes.menuItem}
-              to="/SignUpForm"
-              onClick={() => setIsOpen(false)}
-            >
-              Profile
-            </Link>
+
             <Link
               className={classes.menuHeaderItem}
               to="/VisitorGoalsPage"

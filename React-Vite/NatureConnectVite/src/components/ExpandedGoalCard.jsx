@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import classes from "./ExpandedGoalCard.module.css";
 import goalImage from "/src/assets/natureImage.png";
 import stepsImage from "/src/assets/goalSteps.png";
@@ -8,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ExpandedGoalCard(props) {
+  const navigate = useNavigate();
   return (
     <div className={classes.card}>
       <div className={classes.columnOne}>
@@ -55,12 +58,20 @@ function ExpandedGoalCard(props) {
             alt="Nature Connect"
           />
         </div>
-        <button className={classes.completeButton}>Mark Complete</button>
+        <button
+          className={classes.completeButton}
+          onClick={() => navigate("/VisitorGoalsPage")}
+        >
+          Mark Complete
+        </button>
       </div>
       <div className={classes.columnThree}>
-        <h2 className={classes.exitButton}>
+        <button
+          className={classes.exitButton}
+          onClick={() => navigate("/VisitorGoalsPage")}
+        >
           <FontAwesomeIcon icon={faXmark} />
-        </h2>
+        </button>
       </div>
     </div>
   );

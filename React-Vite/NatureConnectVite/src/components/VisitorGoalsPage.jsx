@@ -19,15 +19,15 @@ function VisitorGoalsPage() {
       <div className={classes.smallGoalCards}>
         <SmallGoalCard
           goalType="Weekly"
-          name="Volunteer at a local nature reserve, community garden or sanctuary"
+          name="Grow a mini garden of native plants to help your local pollinators!"
         />
         <SmallGoalCard
           goalType="Monthly"
-          name="Volunteer at a local nature reserve, community garden or sanctuary"
+          name="Volunteer at a local nature reserve, sanctuary, or conservation org"
         />
         <SmallGoalCard
           goalType="Yearly"
-          name="Volunteer at a local nature reserve, community garden or sanctuary"
+          name="Take a few days to immerse yourself in nature by taking a camping trip!"
         />
       </div>
       <div className={classes.spacerTwo}></div>

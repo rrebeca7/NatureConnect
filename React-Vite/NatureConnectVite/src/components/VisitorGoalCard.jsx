@@ -18,7 +18,7 @@ function VisitorGoalCard({ goalType, name, shortDesc, endDate }) {
           <p className={classes.shortDesc}>{shortDesc}</p>
           <p className={classes.date}>CLOSES {endDate}</p>
         </div>
-        \
+
         <button
           className={classes.showMoreButton}
           onClick={() => navigate("/ExpandedGoalCard")}
