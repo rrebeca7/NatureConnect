@@ -1,10 +1,11 @@
-import classes from "./LogInForm.module.css";
-import {useState} from "react"
+import classes from "./SignUpForm.module.css";
+import {useState} from "react";
+import LogInForm from "./LogInForm";
 
-function LogInForm() {
+function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    password: ""
   });
 
   const handleChange = (e) => {
@@ -22,9 +23,9 @@ function LogInForm() {
   };
 
   return (
-    <div className={classes.logInDiv}>
-      <h1>Welcome Back</h1>
-      <h3>Enter your credentials to login</h3>
+    <div className={classes.signUpDiv}>
+      <h1>Sign Up</h1>
+      <h3>Already a member? <a href="/LogInForm" className={classes.loginLink}>Log In</a></h3>
       <form onSubmit={handleSubmit}>
         <div className={classes.formGroup}>
           <label htmlFor="email">Email </label>
@@ -48,11 +49,10 @@ function LogInForm() {
             required
           />
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit">Sign Up</button>
       </form>
-      <a href="/forgot-password" className={classes.forgotPasswordLink}>Forgot Password?</a>
     </div>
   );
 }
 
-export default LogInForm;
+export default SignUpForm;
